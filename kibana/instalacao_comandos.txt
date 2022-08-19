@@ -1,0 +1,13 @@
+apt install kibana
+
+/etc/kibana/kibana.yml
+    server.host 0.0.0.0
+
+systemctl daemon-reload
+systemctl enable kibana.service
+systemctl start kibana.service
+
+http://192.168.1.107:5601/app/home#/
+
+###Criar index pattern
+Management > Stack Management > Kibana > Index Pattern > New

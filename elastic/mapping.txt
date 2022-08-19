@@ -1,0 +1,6 @@
+###Mapping Explícito
+Campos e seus tipos são pré-definidos
+
+###Mapping Dinâmico
+Campos e seus tipos são automaticamente definidos pelo Elasticsearch
+

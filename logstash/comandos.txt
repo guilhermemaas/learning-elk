@@ -1,0 +1,2 @@
+#importar pro Elasticsearch:
+sudo /usr/share/bin/logstash -f /etc/logstash/conf.d/logstash.conf

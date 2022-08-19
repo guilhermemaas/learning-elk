@@ -1,0 +1,16 @@
+###Se precisar ordenar um campo de texto analisado, mapeie um "keyword copy"
+
+{
+    "mappings": {
+        "properties": {
+            "title": {
+                "type": "text,
+                "fields": {
+                    "raw": {
+                        "type": "keyword"
+                    }
+                }
+            }
+        }
+    }
+}

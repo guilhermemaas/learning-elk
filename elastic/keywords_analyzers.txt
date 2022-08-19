@@ -1,0 +1,32 @@
+#Keyword type mapping:
+O valor da busca precisa bater exatamente com o valor no campo.
+#Se quiser com keyworld, match exato, tem que recriar o índice.
+
+====
+
+#Text type mappin:
+#Analyzer, poderia buscar documentos com info similar.
+Vai retornar documentos onde o campo contenha o valor da busca.
+
+{
+	"mappings": {
+		"properties": {
+			"id": {
+				"type": "integer"
+			},
+			"year": {
+				"type": "date"
+			},
+			"genre": {
+				"type": "keyword"
+			},
+			"title": {
+				"type": "text", 
+				"analyzer": "english"
+			}
+		}
+	}
+}
+
+#Genero vai ser pra busca exata, com keyword
+#Titulo com Analyzer para buscas aproximadas ordenadas pela pontuacao

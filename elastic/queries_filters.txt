@@ -1,0 +1,30 @@
+Filters: pergunta do tipo sim/nao aos dados
+Queries: retornam dados em termos de relevância
+
+Obs.: Usar filtros sempre que puder, são mais rápidos e permite cache.
+O Elastic mantem em cache filtros.
+
+{
+	"query": {
+		"bool": {
+			"must": {"term": {"title": "trek"}},
+			"filter": {"range": {"year": {"gte": 2010}}}
+		}
+	}
+}
+
+must = and do sql
+
+#Fuzzines para buscas aproximadas.
+
+#Prefixos:
+{
+	"error": {
+		"root_cause": [
+			{
+				"type": "query_shard_exception",
+				"reason": "Can only use prefix queries on keyword, text and wildcard fields - not on [year] which is of type [long]",
+				"index_uuid": "1vhQkjUsRvWjrhsYJgvoSA",
+				"index": "movies"
+			}
+		],

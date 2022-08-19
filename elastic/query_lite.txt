@@ -1,0 +1,8 @@
+###URI Search na doc do Elastic
+Buscas sem corpo:
+
+/movies/_search?q=title:start
+/movies/_search?q=+year:>2010+title:trek
+
+q -> query
++ -> Mais que um parâmetro
